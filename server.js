@@ -26,12 +26,12 @@ app.get('/', function(req , res ) {
 
 app.use(eventsApiRoutes.apiRouter); //delegate REST API routes to apiRouter(s)
 
-app.listen(8282 , function () {
-	console.log("http://localhost:8282");
-});
+// app.listen(8282 , function () {
+// 	console.log("http://localhost:8282");
+// });
 
-// let port = process.env.PORT;
-// if (port == null || port == "") {
-//   port = 8000;
-// }
-// app.listen(port);
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);

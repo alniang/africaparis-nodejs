@@ -3,8 +3,8 @@ var MongoClient = require('mongodb').MongoClient;
 var ObjectID = require('mongodb').ObjectID;
 var assert = require('assert');
 
-var mongoDbUrl = 'mongodb://127.0.0.1:27017/projetAL04'; //by default
-var dbName = "projetAL04" //by default
+var mongoDbUrl = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/projetAL04'; //by default
+var dbName = "heroku_xkfxc8s6" //"projetAL04" //by default
 var currentDb=null; //current MongoDB connection
 
 var setMongoDbUrl = function(dbUrl){

@@ -16,12 +16,11 @@ apiRouter.route('/events-api/public/events/:id')
 
 apiRouter.route('/events-api/public/events')
 .get( function(req , res  , next ) {
-	// var changeMini = Number(req.query.changeMini);
-	// var mongoQuery = changeMini ? { change: { $gte: changeMini }  } : { } ;
-	// myGenericMongoClient.genericFindList('fusionEbenafrica',mongoQuery,function(err,events){
-	// 	   res.send(events);
-	// });
-	res.send("Hello test 2")
+	var changeMini = Number(req.query.changeMini);
+	var mongoQuery = changeMini ? { change: { $gte: changeMini }  } : { } ;
+	myGenericMongoClient.genericFindList('fusionEbenafrica',mongoQuery,function(err,events){
+		   res.send(events);
+	});
 });
 
 apiRouter.route('/events-api/public/user/events')

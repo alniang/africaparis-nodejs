@@ -35,8 +35,6 @@ apiRouter.route('/events-api/public/user/events')
 									    });
 });
 
-// http://localhost:8282/devise-api/private/role-admin/devise en mode PUT
-// avec { "code" : "USD" , "nom" : "Dollar" , "change" : 1.123 } dans req.body
 apiRouter.route('/events-api/public/user/events')
 .put( function(req , res  , next ) {
 	var newValueOfEventToUpdate = req.body;
@@ -62,7 +60,6 @@ apiRouter.route('/events-api/public/user/events')
 	});	//end of genericUpdateOne()
 });
 
-// http://localhost:8282/devise-api/private/role-admin/devise/EUR en mode DELETE
 apiRouter.route('/events-api/public/user/events/:id')
 .delete( function(req , res  , next ) {
 	var idEvent = req.params.id;
